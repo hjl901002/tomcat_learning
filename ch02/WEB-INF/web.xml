@@ -20,8 +20,24 @@
         </servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>        
+        <servlet-class>
+            org.huangjl.ch02.servlet.WelcomeServlet
+        </servlet-class>
+        <init-param>
+            <param-name>greeting</param-name>
+            <param-value>Welcome you</param-value>
+        </init-param>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>HelloWordServlet</servlet-name>
         <url-pattern>/helloword</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/welcome</url-pattern>
     </servlet-mapping>
 </web-app>
