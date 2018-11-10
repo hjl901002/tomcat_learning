@@ -1,0 +1,8 @@
+<Context docBase="E:\tomcat_learning\ch08\JSPLesson\ch08" reloadable="true">
+	<Resource name="jdbc/bookstore" auth="Container"
+		type="javax.sql.DataSource"
+		maxActive="100" maxIdle="30" maxWait="10000"
+		username="root" password="root"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/bookstore?autoReconnect=true" />
+</Context>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+  
+  <!--
+  <filter>
+	<filter-name>SimpleFilter</filter-name>
+	<filter-class>org.huangjl.ch16.filter.SimpleFilter</filter-class>
+  </filter>
+  <filter-mapping>
+	<filter-name>SimpleFilter</filter-name>
+	<url-pattern>/test.jsp</url-pattern>
+  </filter-mapping>
+  -->
+  
+  <!--
+  <filter>
+	<filter-name>LogonFilter</filter-name>
+	<filter-class>org.huangjl.ch16.filter.LogonFilter</filter-class>
+	
+	<init-param>
+		<param-name>logon_uri</param-name>
+		<param-value>logon.jsp</param-value>
+	</init-param>
+	
+	<init-param>
+		<param-name>home_uri</param-name>
+		<param-value>home.jsp</param-value>
+	</init-param>
+  </filter>
+  
+  <filter-mapping>
+	<filter-name>LogonFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  -->
+  
+  
+  <filter>
+	<filter-name>CompressionFilter</filter-name>
+	<filter-class>org.huangjl.ch16.filter.CompressionFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+	<filter-name>CompressionFilter</filter-name>
+	<url-pattern>*.jsp</url-pattern>
+	<url-pattern>*.html</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+	<filter-name>GuestbookFilter</filter-name>
+	<filter-class>org.huangjl.ch16.filter.GuestbookFilter</filter-class>
+	
+	<init-param>
+		<param-name>word_file</param-name>
+		<param-value>/WEB-INF/word.txt</param-value>
+	</init-param>
+  </filter>
+  
+  <filter-mapping>
+	<filter-name>GuestbookFilter</filter-name>
+	<url-pattern>/process.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+	<filter-name>GuestbookFilter</filter-name>
+	<url-pattern>/index.jsp</url-pattern>
+	<dispatcher>REQUEST</dispatcher>
+	<dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+  
+</web-app>

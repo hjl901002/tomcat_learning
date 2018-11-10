@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+  
+  <servlet>
+	<servlet-name>OnlineUserServlet</servlet-name>
+	<servlet-class>org.huangjl.ch15.online.OnlineUserServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>OnlineUserServlet</servlet-name>
+	<url-pattern>/online/online</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>logout</servlet-name>
+	<servlet-class>org.huangjl.ch15.online.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>logout</servlet-name>
+	<url-pattern>/online/logout</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
